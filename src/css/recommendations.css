@@ -1,0 +1,38 @@
+.recommendations {
+  position: relative;
+  top: 200px;
+}
+
+.recommend_heading {
+  margin: 0 0 30px 30px;
+}
+
+.recommend_heading p {
+  font-size: 25px;
+}
+
+.fresh_recommendations {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 0 0 30px 0;
+}
+
+.more {
+  display: flex;
+  justify-content: center;
+}
+
+.load {
+  height: 48px;
+  background: none;
+  font-size: 18px;
+  border: 2px solid black;
+  border-radius: 4px;
+  padding: 0px 15px;
+  cursor: pointer;
+}
+
+.load:hover {
+  border: 5px solid black;
+}

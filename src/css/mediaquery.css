@@ -1,0 +1,41 @@
+@media screen and (max-width: 1299px) {
+  .search_box input {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .search_box input {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .search_box,
+  .select_input_icon {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 455px) {
+  .footer_image img {
+    width: 250px;
+  }
+  .olx_app {
+    width: auto;
+    border: none;
+  }
+  .fixed_navbar {
+    justify-content: space-between;
+  }
+  .login,
+  .sell {
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 318px) {
+  .search_card {
+    width: 10rem;
+  }
+}

@@ -1,0 +1,68 @@
+.footer_categories_section {
+  position: relative;
+  top: -3px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: #ebeeef;
+  border-top: 1px solid rgba(0, 47, 52, 0.2);
+  padding: 20px 0;
+}
+
+.footer_categories_section h4 {
+  margin: 20px 0 20px 0;
+}
+
+.footer_categories_section ul li {
+  margin: 0 0 10px 0;
+}
+
+.footer_categories_section ul li a {
+  color: gray;
+  font-size: 14px;
+}
+
+.footer_categories_section ul li a:hover {
+  color: #002f34;
+}
+
+.follow_list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.follow_list li a svg {
+  width: 30px;
+  margin: 0 8px 0 0;
+}
+
+.footer_links a img {
+  width: 80px;
+  margin: 30px 8px 0 0;
+}
+
+.copy_right_section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px 30px;
+  background-color: #002f34;
+  color: white;
+}
+
+.olx_countries,
+.pakistan_copyright {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 12px;
+}
+
+.olx_countries p,
+.pakistan_copyright p {
+  margin: 0 10px 0 0;
+}
+
+.olx_countries a {
+  color: white;
+}

@@ -1,0 +1,36 @@
+.last_search {
+  position: relative;
+  top: 150px;
+  background-color: #ebeeef;
+  margin: 0 24px 0 24px;
+  padding: 16px 16px 32px;
+}
+
+.search_heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 20px 0;
+}
+
+.search_heading p {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.search_link {
+  color: black;
+  border-bottom: 2px solid black;
+  padding: 0 0 1px 0;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.search_link:hover {
+  border: none;
+}
+
+.searches {
+  display: flex;
+  overflow: hidden;
+}

@@ -1,0 +1,178 @@
+.fixed_navbar {
+  position: fixed;
+  width: 100vw;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px 16px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.fixed_navbar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 47, 52, 0.03);
+  z-index: -1;
+}
+
+.logo_svg {
+  width: 48px;
+  height: 48px;
+}
+
+.select_input_icon,
+.search_box {
+  position: relative;
+}
+
+.select_box_search,
+.expand,
+.search_icon {
+  position: absolute;
+}
+
+.select_option {
+  position: relative;
+  height: 48px;
+  padding: 0 30px 0 45px;
+  border: 2px solid black;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.select_box_search {
+  position: absolute;
+  font-size: 40px !important;
+  left: 0;
+  margin: 5px 0px 0px 5px;
+  z-index: 1;
+}
+
+.expand {
+  position: absolute;
+  font-size: 45px !important;
+  right: 0;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out !important;
+}
+
+.search_input_box {
+  position: relative;
+  height: 48px;
+  width: 700px;
+  font-size: 16px;
+  border: 2px solid black;
+  padding: 0 0 0 16px;
+}
+
+.select_option:focus,
+.search_box input:focus {
+  border: 2px solid aqua;
+}
+
+.search_icon {
+  position: absolute;
+  height: 100%;
+  font-size: 48px !important;
+  background-color: black;
+  color: white !important;
+  cursor: pointer;
+}
+
+.login,
+.sell {
+  color: black;
+}
+
+.header_buttons {
+  margin: 0 0 0 80px;
+}
+
+.login {
+  background: none;
+  border: none;
+  border-bottom: 2px solid black;
+  font-weight: 700;
+  padding: 0 0 2px 0;
+  margin: 0 30px 0 -10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.login:hover {
+  border: none;
+}
+
+.sell {
+  background-color: white;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-weight: 800px;
+  border-top: 5px solid aqua;
+  border-left: 5px solid orange;
+  border-right: 5px solid blue;
+  border-bottom: 5px solid blue;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.select_box {
+  position: relative;
+}
+
+.option_section {
+  position: absolute;
+  width: 100%;
+  height: 210px;
+  overflow: auto;
+  background-color: white;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.12), 0 6px 6px 0 rgba(0, 0, 0, 0.24);
+  display: none;
+}
+
+.option_section p {
+  font-size: 13px;
+  margin: 10px 0 10px 20px;
+}
+
+ul.recent_options {
+  margin: 0 0 20px 0;
+}
+
+.location {
+  vertical-align: middle;
+}
+
+.recent_option_item,
+.popular_option_item {
+  padding: 10px 10px;
+  cursor: pointer;
+}
+
+.recent_option_item:hover,
+.popular_option_item:hover {
+  background-color: rgba(0, 255, 255, 0.3);
+}
+
+.expand.rotate {
+  transform: rotate(180deg);
+  transition: all 0.3s ease-in-out;
+}
+
+.option_section.display {
+  display: block;
+}
+
+.select_option.border {
+  border: 2px solid aqua;
+}
+
+.user_log_in {
+  margin: 0 -80px 0 50px;
+}

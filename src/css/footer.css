@@ -1,0 +1,45 @@
+.footer {
+  position: relative;
+  top: 300px;
+}
+
+.footer_content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgba(211, 211, 211, 0.3);
+}
+
+.olx_app {
+  border-right: 2px solid grey;
+}
+
+.olx_app h1 {
+  color: #002f34;
+  font-weight: 700;
+  font-size: 34px;
+  margin: 10px 0 28px 0;
+}
+
+.olx_app p {
+  color: #002f34;
+  font-size: 20px;
+  font-weight: 400;
+  max-width: 400px;
+}
+
+.stores p {
+  color: #002f34;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 800;
+  margin: 10px 0 20px 0;
+}
+
+.stores a img {
+  width: 128px;
+  height: 40px;
+  height: auto;
+  margin-right: 8px;
+}
