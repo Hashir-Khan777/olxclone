@@ -20,14 +20,16 @@ const login_with_facebook = () => {
         document.querySelector(".search_input_box").style.width = "500px";
         document.querySelector(".login_in_olx").style.display = "none";
 
+        var key = firebase.database().ref("/").push().key;
+
         let user_login = {
           name: user.displayName,
           photo: user.photoURL,
-          provider: user.providerId,
+          FirebaseKey: key,
           uid: user.uid,
         };
 
-        firebase.database().ref("/").child('loginusers').set(user_login);
+        firebase.database().ref("/").child(key).set(user_login);
       })
       .catch(function (error) {
         var errorCode = error.code;
