@@ -7,6 +7,13 @@
   align-items: center;
 }
 
+.open_panel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 .user_photo {
   display: flex;
   flex-wrap: wrap;
@@ -36,7 +43,7 @@
   border-radius: 50%;
 }
 
-.user_panel {
+.user_panel_icon {
   vertical-align: middle;
   font-size: 40px !important;
 }
@@ -44,10 +51,81 @@
 .notification_icon,
 .chat_icon {
   font-size: 30px !important;
+  transition: 0.3s all ease-in-out !important;
+  margin: 5px !important;
+  border-radius: 50%;
+}
+
+.notification_icon:hover,
+.chat_icon:hover {
+  background-color: aquamarine;
+  transition: 0.3s all ease-in-out !important;
 }
 
 .chat_with_olx,
 .notification {
   cursor: pointer;
   margin: 0 10px 0 0;
+}
+
+.user_panel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: -45px;
+  right: 0;
+  display: none;
+}
+
+.panel_block {
+  display: block;
+}
+
+.panel {
+  position: relative;
+  width: 250px;
+  background-color: white;
+  padding: 10px 0;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.12), 0 6px 6px 0 rgba(0, 0, 0, 0.24);
+}
+
+.hello {
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+
+.panel_photo {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 20px 0;
+}
+
+.panel_url {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  margin: 0 10px 0 0;
+}
+
+.profile_edit {
+  display: inline;
+  font-size: 12px;
+  text-decoration: underline;
+}
+
+.panel_item {
+  padding: 13px 5px;
+}
+
+.panel_icon {
+  vertical-align: middle;
+  margin: 0 4px 0 0;
+}
+
+.panel_item:hover {
+  background-color: aquamarine;
 }
