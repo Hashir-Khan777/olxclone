@@ -12,18 +12,28 @@ import TuneIcon from "@material-ui/icons/Tune";
 import GetAppIcon from "@material-ui/icons/GetApp";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 
 function UserLogedIn(props) {
+  firebase
+    .database()
+    .ref("/")
+    .on("child_added", () => {
+      document.querySelector(".login").style.display = "none";
+      document.querySelector(".user_loged_in").style.display = "flex";
+      document.querySelector(".search_input_box").style.width = "500px";
+    });
   function see_panel() {
     document.querySelector(".user_panel").classList.toggle("panel_block");
   }
-  console.log("props===>", props.current_user);
   let user = props.current_user;
 
   return (
     <ul className="user_loged_in">
       <li className="chat_with_olx">
-        <ChatBubbleOutlineRoundedIcon className="chat_icon" />
+        <Link to="/chat">
+          <ChatBubbleOutlineRoundedIcon className="chat_icon" />{" "}
+        </Link>
       </li>
 
       <li className="notification">

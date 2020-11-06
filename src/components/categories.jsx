@@ -2,7 +2,7 @@ import React from "react";
 import "../css/categories.css";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
-function Categories() {
+function Categories(props) {
   return (
     <div className="header_categories_section">
       <div className="categories">
@@ -20,7 +20,7 @@ function Categories() {
         </ul>
       </div>
 
-      <div className="header_image">
+      <div className="header_image" id={props.id}>
       </div>
     </div>
   );

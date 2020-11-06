@@ -45,3 +45,7 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
+#image_none {
+  display: none;
+}
