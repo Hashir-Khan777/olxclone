@@ -11,25 +11,14 @@ import HelpOutlineIcon from "@material-ui/icons/HelpOutline";
 import TuneIcon from "@material-ui/icons/Tune";
 import GetAppIcon from "@material-ui/icons/GetApp";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
+import { connect } from "react-redux";
 
-function UserLogedIn() {
-  firebase
-    .database()
-    .ref("/")
-    .on("child_added", function (data) {
-      var login_user_photo = data.val().photo;
-      document
-        .querySelector(".user_photo_url")
-        .setAttribute("src", login_user_photo);
-      document
-        .querySelector(".panel_photo_url")
-        .setAttribute("src", login_user_photo);
-      document.querySelector(".panel_user_name").innerHTML = data.val().name;
-    });
-
+function UserLogedIn(props) {
   function see_panel() {
     document.querySelector(".user_panel").classList.toggle("panel_block");
   }
+  console.log("props===>", props.current_user);
+  let user = props.current_user;
 
   return (
     <ul className="user_loged_in">
@@ -44,7 +33,7 @@ function UserLogedIn() {
       <li className="user_photo">
         <div className="open_panel" onClick={() => see_panel()}>
           <div className="photo_url">
-            <img alt="" className="user_photo_url" />
+            <img src={user.photo} alt="" className="user_photo_url" />
           </div>
           <ExpandMoreIcon className="user_panel_icon" />
         </div>
@@ -53,10 +42,10 @@ function UserLogedIn() {
             <p className="hello">Hello,</p>
             <div className="panel_photo">
               <div className="photo_url panel_url">
-                <img alt="" className="panel_photo_url" />
+                <img src={user.photo} alt="" className="panel_photo_url" />
               </div>
               <div className="panel_info">
-                <h2 className="panel_user_name"></h2>
+                <h2 className="panel_user_name"> {user.name} </h2>
                 <p className="profile_edit">View and edit your profile</p>
               </div>
             </div>
@@ -101,4 +90,8 @@ function UserLogedIn() {
   );
 }
 
-export default UserLogedIn;
+const mapStateToProps = (state) => ({
+  current_user: state.current_user,
+});
+
+export default connect(mapStateToProps, null)(UserLogedIn);

@@ -1,5 +1,6 @@
 const INITIAL_STATE = {
   users: [],
+  current_user: [],
 };
 
 export default (state = INITIAL_STATE, action) => {
@@ -8,6 +9,12 @@ export default (state = INITIAL_STATE, action) => {
       return {
         ...state,
         users: [...state.users, action.payload],
+      };
+
+    case "SET_USER":
+      return {
+        ...state,
+        current_user: action.payload,
       };
 
     default:

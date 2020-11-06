@@ -3,7 +3,9 @@ import firebase from "firebase";
 
 const login_with_facebook = () => {
   return (dispatch) => {
+    // facebook authentication
     var provider = new firebase.auth.FacebookAuthProvider();
+
     provider.setCustomParameters({
       display: "popup",
     });
@@ -14,23 +16,39 @@ const login_with_facebook = () => {
       .then(function (result) {
         var token = result.credential.accessToken;
         var user = result.user;
-        document.querySelector(".user_loged_in").style.display = "flex";
-        document.querySelector(".login").style.display = "none";
-        document.querySelector(".search_input_box").style.width = "500px";
-        document.querySelector(".login_in_olx").style.display = "none";
 
-        var key = firebase.database().ref("/").push().key;
-
-        let user_login = {
+        // create user for database
+        const create_user = {
           name: user.displayName,
+          email: user.email,
           photo: user.photoURL,
           uid: user.uid,
-          key: key,
         };
 
-        dispatch({ type: "USER_LOGIN", payload: { user_login: user_login } });
-
-        firebase.database().ref("/").child(key).set(user_login);
+        // send to database
+        firebase
+          .database()
+          .ref("/")
+          .child(user.uid)
+          .set(create_user)
+          .then(() => {
+            // send data to reducer
+            dispatch({
+              type: "USER_LOGIN",
+              payload: create_user,
+            });
+            dispatch({
+              type: "SET_USER",
+              payload: create_user,
+            });
+          })
+          .then(() => {
+            // show user panel
+            document.querySelector(".login").style.display = "none";
+            document.querySelector(".user_loged_in").style.display = "flex";
+            document.querySelector(".login_in_olx").style.display = "none";
+            document.querySelector(".search_input_box").style.width = "500px";
+          });
       })
       .catch(function (error) {
         var errorCode = error.code;
