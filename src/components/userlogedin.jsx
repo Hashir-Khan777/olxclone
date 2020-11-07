@@ -18,13 +18,26 @@ function UserLogedIn(props) {
   firebase
     .database()
     .ref("/")
-    .on("child_added", () => {
+    .on("child_added", (data) => {
       document.querySelector(".login").style.display = "none";
-      document.querySelector(".user_loged_in").style.display = "flex";
       document.querySelector(".search_input_box").style.width = "500px";
+      document.querySelector(".firebase_id").setAttribute("id", data.val().uid);
     });
   function see_panel() {
     document.querySelector(".user_panel").classList.toggle("panel_block");
+  }
+  function log_out() {
+    firebase
+      .database()
+      .ref("/")
+      .child(document.querySelector(".firebase_id").id)
+      .remove();
+    document
+      .querySelector(".firebase_id")
+      .parentElement.parentElement.parentElement.parentElement.parentElement.remove();
+
+      document.querySelector(".login").style.display = "block";
+      document.querySelector(".search_input_box").style.width = "700px";
   }
   let user = props.current_user;
 
@@ -32,7 +45,7 @@ function UserLogedIn(props) {
     <ul className="user_loged_in">
       <li className="chat_with_olx">
         <Link to="/chat">
-          <ChatBubbleOutlineRoundedIcon className="chat_icon" />{" "}
+          <ChatBubbleOutlineRoundedIcon className="chat_icon" />
         </Link>
       </li>
 
@@ -88,7 +101,7 @@ function UserLogedIn(props) {
                 Install OLX Lite App
               </li>
               <hr />
-              <li className="panel_item">
+              <li className="panel_item firebase_id" onClick={() => log_out()}>
                 <ExitToAppIcon className="panel_icon" />
                 Logout
               </li>
