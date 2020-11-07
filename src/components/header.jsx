@@ -24,7 +24,7 @@ function Header() {
 
   function sell() {
     if (document.querySelector(".user_loged_in").style.display == "flex") {
-      window.location = "/post";
+      window.location = "/post/item";
     } else {
       document.querySelector(".login_in_olx").style.display = "flex";
     }
