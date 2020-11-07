@@ -22,6 +22,14 @@ function Header() {
     document.querySelector(".login_in_olx").style.display = "flex";
   }
 
+  function sell() {
+    if (document.querySelector(".user_loged_in").style.display == "flex") {
+      window.location = "/post";
+    } else {
+      document.querySelector(".login_in_olx").style.display = "flex";
+    }
+  }
+
   return (
     <div className="header">
       <div className="fixed_navbar">
@@ -98,9 +106,9 @@ function Header() {
           <button className="login" onClick={() => login()}>
             Login
           </button>
-          <Link to="/" className="sell">
+          <button className="sell" onClick={() => sell()}>
             +SELL
-          </Link>
+          </button>
         </div>
       </div>
     </div>

@@ -60,3 +60,16 @@
 #border {
   border: 1px solid black;
 }
+
+.filled_heart {
+  position: absolute;
+  background: none;
+  border: none;
+  right: 0;
+  z-index: 99;
+  cursor: pointer;
+}
+
+.none {
+  display: none !important;
+}

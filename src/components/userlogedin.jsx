@@ -19,13 +19,13 @@ function UserLogedIn(props) {
     .database()
     .ref("/")
     .on("child_added", (data) => {
-      document.querySelector(".login").style.display = "none";
-      document.querySelector(".search_input_box").style.width = "500px";
       document.querySelector(".firebase_id").setAttribute("id", data.val().uid);
     });
+
   function see_panel() {
     document.querySelector(".user_panel").classList.toggle("panel_block");
   }
+
   function log_out() {
     firebase
       .database()
@@ -36,9 +36,12 @@ function UserLogedIn(props) {
       .querySelector(".firebase_id")
       .parentElement.parentElement.parentElement.parentElement.parentElement.remove();
 
-      document.querySelector(".login").style.display = "block";
-      document.querySelector(".search_input_box").style.width = "700px";
+    window.location = "/";
+
+    document.querySelector(".login").style.display = "block";
+    document.querySelector(".search_input_box").style.width = "700px";
   }
+
   let user = props.current_user;
 
   return (
