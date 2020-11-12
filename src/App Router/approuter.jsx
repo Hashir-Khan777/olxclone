@@ -11,7 +11,7 @@ function Approuter() {
       <Route exact path="/" component={Home} />
       <Route exact path="/chat" component={Chat} />
       <Route exact path="/post/item" component={Post} />
-      <Route exact path={"/open/"} component={Openit} />
+      <Route exact path="/open/item" component={Openit} />
     </Router>
   );
 }

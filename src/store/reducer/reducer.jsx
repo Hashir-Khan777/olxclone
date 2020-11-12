@@ -1,6 +1,7 @@
 const INITIAL_STATE = {
   users: [],
   current_user: [],
+  current_post: [],
 };
 
 export default (state = INITIAL_STATE, action) => {
@@ -15,6 +16,12 @@ export default (state = INITIAL_STATE, action) => {
       return {
         ...state,
         current_user: action.payload,
+      };
+
+    case "SET_POST":
+      return {
+        ...state,
+        current_post: action.payload,
       };
 
     default:

@@ -2,6 +2,8 @@ import React from "react";
 import "../css/searchcomponent.css";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import FavoriteIcon from "@material-ui/icons/Favorite";
+import { Post } from "../store/action/post";
+import { connect } from "react-redux";
 
 function SearchComponent(props) {
   const like = (e) => {
@@ -20,8 +22,12 @@ function SearchComponent(props) {
     );
   };
 
-  const openit = () => {
-    window.location = "/open/";
+  var post_item = {
+    image: props.image,
+    price: props.price,
+    para: props.para,
+    place: props.place,
+    date: props.date,
   };
 
   return (
@@ -30,7 +36,7 @@ function SearchComponent(props) {
         <div
           className="search_card_content"
           id={props.id}
-          onClick={() => openit()}
+          onClick={(post_item) => props.post(post_item)}
         >
           <div className="card_image">
             <figure>
@@ -39,10 +45,8 @@ function SearchComponent(props) {
           </div>
 
           <div className="card_content">
-            <p className="price">Rs 8,750</p>
-            <p className="card_para">
-              Store racks, Warehouse Storage rack, Slotted Angle Adjustable Rack
-            </p>
+            <p className="price">{props.price}</p>
+            <p className="card_para">{props.para}</p>
           </div>
 
           <div className="card_date">
@@ -62,4 +66,12 @@ function SearchComponent(props) {
   );
 }
 
-export default SearchComponent;
+const mapStateToProps = (state) => ({
+  current_post: state.current_post,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  post: (post_item) => dispatch(Post(post_item)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(SearchComponent);
