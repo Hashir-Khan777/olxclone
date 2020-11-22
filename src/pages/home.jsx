@@ -2,6 +2,7 @@ import React from "react";
 import Categories from "../components/categories";
 import Footer from "../components/footer";
 import Header from "../components/header";
+import HeaderImage from "../components/headerimage";
 import LastSearch from "../components/lastsearch";
 import Login from "../components/login";
 import Recommendations from "../components/recommendations";
@@ -12,6 +13,7 @@ function Home() {
     <div className="home">
       <Header />
       <Categories />
+      <HeaderImage />
       <LastSearch />
       <Recommendations />
       <Footer />

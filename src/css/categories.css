@@ -35,17 +35,3 @@
   vertical-align: middle;
   font-size: 35px !important;
 }
-
-.header_image {
-  position: relative;
-  top: 40px;
-  width: 100%;
-  height: 45vh;
-  background-image: url("../images/headerimage.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-#image_none {
-  display: none;
-}

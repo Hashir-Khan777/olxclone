@@ -1,0 +1,33 @@
+.categories_item_list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.post_categories_list {
+  margin: 20px 0;
+  width: 50%;
+}
+
+.post_categories_item {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 2;
+  color: rgba(0, 47, 52, 0.64);
+  fill: rgba(0, 47, 52, 0.64) !important;
+  border: 1px solid rgba(0, 47, 52, 0.2);
+  padding: 8px;
+  cursor: pointer;
+}
+
+.post_categories_name {
+  width: 100%;
+  margin: 0 0 0 16px;
+}
+
+.post_categories_item:hover {
+  color: #002f34 !important;
+  fill: #002f34 !important;
+  background-color: rgba(0, 47, 52, 0.2);
+}

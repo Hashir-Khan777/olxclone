@@ -19,8 +19,6 @@ function Categories() {
           <li className="category_item">Land & Plots</li>
         </ul>
       </div>
-
-      <div className="header_image"></div>
     </div>
   );
 }

@@ -1,0 +1,10 @@
+.post_footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  line-height: 18px;
+  background-color: #002f34;
+  color: white;
+  padding: 16px 100px;
+}
