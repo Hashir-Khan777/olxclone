@@ -120,7 +120,7 @@ const PostCategories = () => {
     "Pet Food & Accessories",
     "Other Animals",
   ];
-  let furnitue = [
+  let furnituer = [
     "Sofa & Chairs",
     "Beds & Wardrobes",
     "Home Decoration",
@@ -161,26 +161,159 @@ const PostCategories = () => {
     "Kids Accessories",
   ];
 
-  const showList = () => {
-    alert("hy");
+  const showList = (e) => {
+    let category_name = e.target.innerText;
+    e.target.parentElement.classList.add("backgroung_color_change");
+    let more_categories = document.querySelector(".more_categories_list");
+
+    switch (category_name) {
+      case "Mobiles":
+        mobiles.map((value, key) => {
+          let li = document.createElement("li");
+          li.className = "post_categories_item";
+          li.key = key;
+          li.innerHTML = value;
+          more_categories.appendChild(li);
+        });
+        break;
+      case "Vehicles":
+        vehicles.map((value, key) => {
+          let li = document.createElement("li");
+          li.className = "post_categories_item";
+          li.key = key;
+          li.innerHTML = value;
+          more_categories.appendChild(li);
+        });
+        break;
+      case "Property for Sale":
+        property_for_sale.map((value, key) => {
+          let li = document.createElement("li");
+          li.className = "post_categories_item";
+          li.key = key;
+          li.innerHTML = value;
+          more_categories.appendChild(li);
+        });
+        break;
+      case "property for Rent":
+        property_for_rent.map((value, key) => {
+          let li = document.createElement("li");
+          li.className = "post_categories_item";
+          li.key = key;
+          li.innerHTML = value;
+          more_categories.appendChild(li);
+        });
+        break;
+      case "Electronics & Home Appliances":
+        electronics_and_home_appliences.map((value, key) => {
+          let li = document.createElement("li");
+          li.className = "post_categories_item";
+          li.key = key;
+          li.innerHTML = value;
+          more_categories.appendChild(li);
+        });
+        break;
+      case "Bikes":
+        bikes.map((value, key) => {
+          let li = document.createElement("li");
+          li.className = "post_categories_item";
+          li.key = key;
+          li.innerHTML = value;
+          more_categories.appendChild(li);
+        });
+        break;
+      case "Business, Indutrial & Agriculture":
+        business_industrial.map((value, key) => {
+          let li = document.createElement("li");
+          li.className = "post_categories_item";
+          li.key = key;
+          li.innerHTML = value;
+          more_categories.appendChild(li);
+        });
+        break;
+      case "Services":
+        services.map((value, key) => {
+          let li = document.createElement("li");
+          li.className = "post_categories_item";
+          li.key = key;
+          li.innerHTML = value;
+          more_categories.appendChild(li);
+        });
+        break;
+      case "Jobs":
+        jobs.map((value, key) => {
+          let li = document.createElement("li");
+          li.className = "post_categories_item";
+          li.key = key;
+          li.innerHTML = value;
+          more_categories.appendChild(li);
+        });
+        break;
+      case "Animals":
+        animals.map((value, key) => {
+          let li = document.createElement("li");
+          li.className = "post_categories_item";
+          li.key = key;
+          li.innerHTML = value;
+          more_categories.appendChild(li);
+        });
+        break;
+      case "Furniture & Home Decor":
+        furnituer.map((value, key) => {
+          let li = document.createElement("li");
+          li.className = "post_categories_item";
+          li.key = key;
+          li.innerHTML = value;
+          more_categories.appendChild(li);
+        });
+        break;
+      case "Fashion & Beauty":
+        fashion.map((value, key) => {
+          let li = document.createElement("li");
+          li.className = "post_categories_item";
+          li.key = key;
+          li.innerHTML = value;
+          more_categories.appendChild(li);
+        });
+        break;
+      case "Books, Sports & hobbies":
+        books_sports.map((value, key) => {
+          let li = document.createElement("li");
+          li.className = "post_categories_item";
+          li.key = key;
+          li.innerHTML = value;
+          more_categories.appendChild(li);
+        });
+        break;
+      case "Kids":
+        kids.map((value, key) => {
+          let li = document.createElement("li");
+          li.className = "post_categories_item";
+          li.key = key;
+          li.innerHTML = value;
+          more_categories.appendChild(li);
+        });
+        break;
+      default:
+        return null;
+    }
   };
 
   return (
     <div className="categories_item_list">
       <ul className="post_categories_list">
-        <li className="post_categories_item" onClick={() => showList()}>
+        <li className="post_categories_item" onClick={(e) => showList(e)}>
           <FontAwesomeIcon icon={faMobileAlt} />
           <span className="post_categories_name"> Mobiles </span>
           <FontAwesomeIcon icon={faAngleRight} className="see_more_icon" />
         </li>
 
-        <li className="post_categories_item" onClick={() => showList()}>
+        <li className="post_categories_item" onClick={(e) => showList(e)}>
           <FontAwesomeIcon icon={faCarAlt} />
           <span className="post_categories_name"> Vehicles </span>
           <FontAwesomeIcon icon={faAngleRight} className="see_more_icon" />
         </li>
 
-        <li className="post_categories_item" onClick={() => showList()}>
+        <li className="post_categories_item" onClick={(e) => showList(e)}>
           <svg
             width="30px"
             height="30px"
@@ -193,7 +326,7 @@ const PostCategories = () => {
           <FontAwesomeIcon icon={faAngleRight} className="see_more_icon" />
         </li>
 
-        <li className="post_categories_item" onClick={() => showList()}>
+        <li className="post_categories_item" onClick={(e) => showList(e)}>
           <svg
             width="30px"
             height="30px"
@@ -206,7 +339,7 @@ const PostCategories = () => {
           <FontAwesomeIcon icon={faAngleRight} className="see_more_icon" />
         </li>
 
-        <li className="post_categories_item" onClick={() => showList()}>
+        <li className="post_categories_item" onClick={(e) => showList(e)}>
           <FontAwesomeIcon icon={faTv} />
           <span className="post_categories_name">
             Electronics & Home Appliances
@@ -214,13 +347,13 @@ const PostCategories = () => {
           <FontAwesomeIcon icon={faAngleRight} className="see_more_icon" />
         </li>
 
-        <li className="post_categories_item" onClick={() => showList()}>
+        <li className="post_categories_item" onClick={(e) => showList(e)}>
           <FontAwesomeIcon icon={faMotorcycle} />
           <span className="post_categories_name"> Bikes </span>
           <FontAwesomeIcon icon={faAngleRight} className="see_more_icon" />
         </li>
 
-        <li className="post_categories_item" onClick={() => showList()}>
+        <li className="post_categories_item" onClick={(e) => showList(e)}>
           <FontAwesomeIcon icon={faIndustry} />
           <span className="post_categories_name">
             Business, Indutrial & Agriculture
@@ -228,58 +361,50 @@ const PostCategories = () => {
           <FontAwesomeIcon icon={faAngleRight} className="see_more_icon" />
         </li>
 
-        <li className="post_categories_item" onClick={() => showList()}>
+        <li className="post_categories_item" onClick={(e) => showList(e)}>
           <FontAwesomeIcon icon={faConciergeBell} />
           <span className="post_categories_name"> Services </span>
           <FontAwesomeIcon icon={faAngleRight} className="see_more_icon" />
         </li>
 
-        <li className="post_categories_item" onClick={() => showList()}>
+        <li className="post_categories_item" onClick={(e) => showList(e)}>
           <FontAwesomeIcon icon={faBriefcase} />
           <span className="post_categories_name"> Jobs </span>
           <FontAwesomeIcon icon={faAngleRight} className="see_more_icon" />
         </li>
 
-        <li className="post_categories_item" onClick={() => showList()}>
+        <li className="post_categories_item" onClick={(e) => showList(e)}>
           <FontAwesomeIcon icon={faDog} />
           <span className="post_categories_name"> Animals </span>
           <FontAwesomeIcon icon={faAngleRight} className="see_more_icon" />
         </li>
 
-        <li className="post_categories_item" onClick={() => showList()}>
+        <li className="post_categories_item" onClick={(e) => showList(e)}>
           <FontAwesomeIcon icon={faCouch} />
           <span className="post_categories_name"> Furniture & Home Decor </span>
           <FontAwesomeIcon icon={faAngleRight} className="see_more_icon" />
         </li>
 
-        <li className="post_categories_item" onClick={() => showList()}>
+        <li className="post_categories_item" onClick={(e) => showList(e)}>
           <FontAwesomeIcon icon={faTshirt} />
           <span className="post_categories_name"> Fashion & Beauty </span>
           <FontAwesomeIcon icon={faAngleRight} className="see_more_icon" />
         </li>
 
-        <li className="post_categories_item" onClick={() => showList()}>
+        <li className="post_categories_item" onClick={(e) => showList(e)}>
           <FontAwesomeIcon icon={faGuitar} />
           <span className="post_categories_name">Books, Sports & hobbies</span>
           <FontAwesomeIcon icon={faAngleRight} className="see_more_icon" />
         </li>
 
-        <li className="post_categories_item" onClick={() => showList()}>
+        <li className="post_categories_item" onClick={(e) => showList(e)}>
           <FontAwesomeIcon icon={faChild} />
           <span className="post_categories_name"> Kids </span>
           <FontAwesomeIcon icon={faAngleRight} className="see_more_icon" />
         </li>
       </ul>
 
-      <ul className="post_categories_list">
-        {jobs.map((value, key) => {
-          return (
-            <li key={key} className="post_categories_item">
-              {value}
-            </li>
-          );
-        })}
-      </ul>
+      <ul className="post_categories_list more_categories_list"></ul>
     </div>
   );
 };
