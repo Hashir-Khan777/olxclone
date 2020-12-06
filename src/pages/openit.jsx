@@ -110,6 +110,7 @@ const Openit = () => {
                   <p className="seller_name">Member Since 2020</p>
                 </div>
               </div>
+
               <div className="profile_button">
                 <button className="go_to_profile">
                   <ChevronRightIcon className="profile_icon" />
@@ -139,7 +140,6 @@ const Openit = () => {
 
           <section className="google_location">
             <h1 className="posted_heading">Posted in</h1>
-
             <p className="posted_location">Bahawalpur, Punjab, Pakistan</p>
           </section>
         </div>

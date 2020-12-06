@@ -162,15 +162,21 @@ const PostCategories = () => {
   ];
 
   const showList = (e) => {
-    let category_name = e.target.innerText;
-    e.target.parentElement.classList.add("backgroung_color_change");
     let more_categories = document.querySelector(".more_categories_list");
+    let category_name = e.target.innerText;
+    let post_list_item = document.querySelector(".post_categories_list")
+      .children;
+    for (var i = 0; i < post_list_item.length; i++) {
+      post_list_item[i].className.includes("background_color_change") == false
+        ? e.target.parentElement.classList.add("background_color_change")
+        : post_list_item[i].classList.remove("background_color_change");
+    }
 
     switch (category_name) {
       case "Mobiles":
         mobiles.map((value, key) => {
           let li = document.createElement("li");
-          li.className = "post_categories_item";
+          li.className = "more_categories_item";
           li.key = key;
           li.innerHTML = value;
           more_categories.appendChild(li);
@@ -179,7 +185,7 @@ const PostCategories = () => {
       case "Vehicles":
         vehicles.map((value, key) => {
           let li = document.createElement("li");
-          li.className = "post_categories_item";
+          li.className = "more_categories_item";
           li.key = key;
           li.innerHTML = value;
           more_categories.appendChild(li);
@@ -188,7 +194,7 @@ const PostCategories = () => {
       case "Property for Sale":
         property_for_sale.map((value, key) => {
           let li = document.createElement("li");
-          li.className = "post_categories_item";
+          li.className = "more_categories_item";
           li.key = key;
           li.innerHTML = value;
           more_categories.appendChild(li);
@@ -197,7 +203,7 @@ const PostCategories = () => {
       case "property for Rent":
         property_for_rent.map((value, key) => {
           let li = document.createElement("li");
-          li.className = "post_categories_item";
+          li.className = "more_categories_item";
           li.key = key;
           li.innerHTML = value;
           more_categories.appendChild(li);
@@ -206,7 +212,7 @@ const PostCategories = () => {
       case "Electronics & Home Appliances":
         electronics_and_home_appliences.map((value, key) => {
           let li = document.createElement("li");
-          li.className = "post_categories_item";
+          li.className = "more_categories_item";
           li.key = key;
           li.innerHTML = value;
           more_categories.appendChild(li);
@@ -215,7 +221,7 @@ const PostCategories = () => {
       case "Bikes":
         bikes.map((value, key) => {
           let li = document.createElement("li");
-          li.className = "post_categories_item";
+          li.className = "more_categories_item";
           li.key = key;
           li.innerHTML = value;
           more_categories.appendChild(li);
@@ -224,7 +230,7 @@ const PostCategories = () => {
       case "Business, Indutrial & Agriculture":
         business_industrial.map((value, key) => {
           let li = document.createElement("li");
-          li.className = "post_categories_item";
+          li.className = "more_categories_item";
           li.key = key;
           li.innerHTML = value;
           more_categories.appendChild(li);
@@ -233,7 +239,7 @@ const PostCategories = () => {
       case "Services":
         services.map((value, key) => {
           let li = document.createElement("li");
-          li.className = "post_categories_item";
+          li.className = "more_categories_item";
           li.key = key;
           li.innerHTML = value;
           more_categories.appendChild(li);
@@ -242,7 +248,7 @@ const PostCategories = () => {
       case "Jobs":
         jobs.map((value, key) => {
           let li = document.createElement("li");
-          li.className = "post_categories_item";
+          li.className = "more_categories_item";
           li.key = key;
           li.innerHTML = value;
           more_categories.appendChild(li);
@@ -251,7 +257,7 @@ const PostCategories = () => {
       case "Animals":
         animals.map((value, key) => {
           let li = document.createElement("li");
-          li.className = "post_categories_item";
+          li.className = "more_categories_item";
           li.key = key;
           li.innerHTML = value;
           more_categories.appendChild(li);
@@ -260,7 +266,7 @@ const PostCategories = () => {
       case "Furniture & Home Decor":
         furnituer.map((value, key) => {
           let li = document.createElement("li");
-          li.className = "post_categories_item";
+          li.className = "more_categories_item";
           li.key = key;
           li.innerHTML = value;
           more_categories.appendChild(li);
@@ -269,7 +275,7 @@ const PostCategories = () => {
       case "Fashion & Beauty":
         fashion.map((value, key) => {
           let li = document.createElement("li");
-          li.className = "post_categories_item";
+          li.className = "more_categories_item";
           li.key = key;
           li.innerHTML = value;
           more_categories.appendChild(li);
@@ -278,7 +284,7 @@ const PostCategories = () => {
       case "Books, Sports & hobbies":
         books_sports.map((value, key) => {
           let li = document.createElement("li");
-          li.className = "post_categories_item";
+          li.className = "more_categories_item";
           li.key = key;
           li.innerHTML = value;
           more_categories.appendChild(li);
@@ -287,14 +293,14 @@ const PostCategories = () => {
       case "Kids":
         kids.map((value, key) => {
           let li = document.createElement("li");
-          li.className = "post_categories_item";
+          li.className = "more_categories_item";
           li.key = key;
           li.innerHTML = value;
           more_categories.appendChild(li);
         });
         break;
       default:
-        return null;
+        return (more_categories = " ");
     }
   };
 
@@ -404,7 +410,7 @@ const PostCategories = () => {
         </li>
       </ul>
 
-      <ul className="post_categories_list more_categories_list"></ul>
+      <ul className="more_categories_list"></ul>
     </div>
   );
 };
