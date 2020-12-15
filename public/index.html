@@ -19,12 +19,10 @@
   </body>
 
   <script>
-    let WINDOW_URL = window.location.href;
-    if (window.location.pathname === "/") {
-      document.querySelector("title").innerHTML =
-        "OLX - Buy and Sell for free anywhere in Pakistan with OLX online classifieds";
-    } else {
-      document.querySelector("title").innerHTML = WINDOW_URL;
-    }
+    let WINDOW_URL = window.location.pathname;
+    WINDOW_URL === "/"
+      ? (document.querySelector("title").innerHTML =
+          "OLX - Buy and Sell for free anywhere in Pakistan with OLX online classifieds")
+      : (document.querySelector("title").innerHTML = WINDOW_URL);
   </script>
 </html>

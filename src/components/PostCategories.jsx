@@ -300,7 +300,8 @@ const PostCategories = () => {
         });
         break;
       default:
-        return (more_categories = " ");
+        return null;
+        break;
     }
   };
 

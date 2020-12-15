@@ -48,6 +48,7 @@ const login_with_facebook = () => {
             document.querySelector(".user_loged_in").style.display = "flex";
             document.querySelector(".login_in_olx").style.display = "none";
             document.querySelector(".search_input_box").style.width = "500px";
+            console.log(localStorage.getItem("users"));
           });
       })
       .catch(function (error) {

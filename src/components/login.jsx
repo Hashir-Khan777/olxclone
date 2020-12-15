@@ -133,11 +133,9 @@ function Login(props) {
         <p className="privacy_policy">
           If you continue, you are accepting
           <a href="https://help.olx.com.pk/hc/en-us" target="_olxterms">
-            {" "}
             OLX Temrs and Conditions
           </a>
           <a href="https://help.olx.com.pk/hc/en-us" target="_olxpolicy">
-            {" "}
             and Privacy Policy
           </a>
         </p>
