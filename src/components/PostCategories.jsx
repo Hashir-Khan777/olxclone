@@ -174,6 +174,7 @@ const PostCategories = () => {
 
     switch (category_name) {
       case "Mobiles":
+        more_categories.innerHTML = " ";
         mobiles.map((value, key) => {
           let li = document.createElement("li");
           li.className = "more_categories_item";
@@ -183,6 +184,7 @@ const PostCategories = () => {
         });
         break;
       case "Vehicles":
+        more_categories.innerHTML = " ";
         vehicles.map((value, key) => {
           let li = document.createElement("li");
           li.className = "more_categories_item";
@@ -192,6 +194,7 @@ const PostCategories = () => {
         });
         break;
       case "Property for Sale":
+        more_categories.innerHTML = " ";
         property_for_sale.map((value, key) => {
           let li = document.createElement("li");
           li.className = "more_categories_item";
@@ -201,6 +204,7 @@ const PostCategories = () => {
         });
         break;
       case "property for Rent":
+        more_categories.innerHTML = " ";
         property_for_rent.map((value, key) => {
           let li = document.createElement("li");
           li.className = "more_categories_item";
@@ -210,6 +214,7 @@ const PostCategories = () => {
         });
         break;
       case "Electronics & Home Appliances":
+        more_categories.innerHTML = " ";
         electronics_and_home_appliences.map((value, key) => {
           let li = document.createElement("li");
           li.className = "more_categories_item";
@@ -219,6 +224,7 @@ const PostCategories = () => {
         });
         break;
       case "Bikes":
+        more_categories.innerHTML = " ";
         bikes.map((value, key) => {
           let li = document.createElement("li");
           li.className = "more_categories_item";
@@ -228,6 +234,7 @@ const PostCategories = () => {
         });
         break;
       case "Business, Indutrial & Agriculture":
+        more_categories.innerHTML = " ";
         business_industrial.map((value, key) => {
           let li = document.createElement("li");
           li.className = "more_categories_item";
@@ -237,6 +244,7 @@ const PostCategories = () => {
         });
         break;
       case "Services":
+        more_categories.innerHTML = " ";
         services.map((value, key) => {
           let li = document.createElement("li");
           li.className = "more_categories_item";
@@ -246,6 +254,7 @@ const PostCategories = () => {
         });
         break;
       case "Jobs":
+        more_categories.innerHTML = " ";
         jobs.map((value, key) => {
           let li = document.createElement("li");
           li.className = "more_categories_item";
@@ -255,6 +264,7 @@ const PostCategories = () => {
         });
         break;
       case "Animals":
+        more_categories.innerHTML = " ";
         animals.map((value, key) => {
           let li = document.createElement("li");
           li.className = "more_categories_item";
@@ -264,6 +274,7 @@ const PostCategories = () => {
         });
         break;
       case "Furniture & Home Decor":
+        more_categories.innerHTML = " ";
         furnituer.map((value, key) => {
           let li = document.createElement("li");
           li.className = "more_categories_item";
@@ -273,6 +284,7 @@ const PostCategories = () => {
         });
         break;
       case "Fashion & Beauty":
+        more_categories.innerHTML = " ";
         fashion.map((value, key) => {
           let li = document.createElement("li");
           li.className = "more_categories_item";
@@ -282,6 +294,7 @@ const PostCategories = () => {
         });
         break;
       case "Books, Sports & hobbies":
+        more_categories.innerHTML = " ";
         books_sports.map((value, key) => {
           let li = document.createElement("li");
           li.className = "more_categories_item";
@@ -291,6 +304,7 @@ const PostCategories = () => {
         });
         break;
       case "Kids":
+        more_categories.innerHTML = " ";
         kids.map((value, key) => {
           let li = document.createElement("li");
           li.className = "more_categories_item";

@@ -25,11 +25,6 @@ const login_with_google = () => {
           uid: user.uid,
         };
 
-        localStorage.setItem("name", user.displayName);
-        localStorage.setItem("email", user.email);
-        localStorage.setItem("photo", user.photoURL);
-        localStorage.setItem("uid", user.uid);
-
         // send to database
         firebase
           .database()

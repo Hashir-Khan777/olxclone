@@ -25,11 +25,6 @@ const login_with_facebook = () => {
           uid: user.uid,
         };
 
-        localStorage.setItem("name", user.displayName);
-        localStorage.setItem("email", user.email);
-        localStorage.setItem("photo", user.photoURL);
-        localStorage.setItem("uid", user.uid);
-
         // send to database
         firebase
           .database()
@@ -49,11 +44,12 @@ const login_with_facebook = () => {
           })
           .then(() => {
             // show user panel
-            document.querySelector(".login").style.display = "none";
-            document.querySelector(".user_loged_in").style.display = "flex";
-            document.querySelector(".login_in_olx").style.display = "none";
-            document.querySelector(".search_input_box").style.width = "500px";
-            console.log(localStorage.getItem("users"));
+            if (localStorage.getItem("uid") === user.uid) {
+              document.querySelector(".login").style.display = "none";
+              document.querySelector(".user_loged_in").style.display = "flex";
+              document.querySelector(".login_in_olx").style.display = "none";
+              document.querySelector(".search_input_box").style.width = "500px";
+            }
           });
       })
       .catch(function (error) {
